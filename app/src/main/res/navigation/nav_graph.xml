@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.prueba.kotlinrecycler.Login.Fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/action_profile"
+        android:name="com.prueba.kotlinrecycler.Login.Fragments.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_action_profile_to_verifyPhoneFragment"
+            app:destination="@id/actionPhoneVerified" />
+        <action
+            android:id="@+id/actionUpdateEmail"
+            app:destination="@id/updateEmail" />
+        <action
+            android:id="@+id/action_update_password"
+            app:destination="@id/updatePassword" />
+    </fragment>
+    <fragment
+        android:id="@+id/actionPhoneVerified"
+        android:name="com.prueba.kotlinrecycler.Login.Fragments.VerifyPhoneFragment"
+        android:label="Verify Phone">
+        <action
+            android:id="@+id/action_verifyPhoneFragment_to_action_profile"
+            app:destination="@id/action_profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateEmail"
+        android:name="com.prueba.kotlinrecycler.Login.Fragments.UpdateEmail"
+        android:label="UpdateEmail" >
+        <action
+            android:id="@+id/actionBackEmail"
+            app:destination="@id/action_profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/updatePassword"
+        android:name="com.prueba.kotlinrecycler.Login.Fragments.UpdatePassword"
+        android:label="Update Password"
+        tools:layout="@layout/fragment_update_password" >
+        <action
+            android:id="@+id/action_back_password"
+            app:destination="@id/action_profile" />
+    </fragment>
+</navigation>

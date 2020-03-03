@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+    <RelativeLayout
+        android:id="@+id/signupLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_title"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="180dp"
+            android:layout_marginRight="30dp"
+            android:background="#fff"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:id="@+id/linearCorreo"
+                android:layout_marginTop="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:labelFor="@id/text_email"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:text="Para modificar tu correo ingresa tu contrasena" />
+
+
+                <LinearLayout
+                    android:animateLayoutChanges="true"
+                    android:id="@+id/layoutPhone"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+                    <EditText
+                        android:id="@+id/edtNuevoCorreo"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:inputType="textPassword"
+                        android:layout_marginBottom="10dp"
+                        android:drawableLeft="@drawable/ic_point"
+                        android:drawablePadding="10dp"
+                        android:hint="Contrasena"
+                        android:singleLine="true" />
+
+
+                    <Button
+                        android:id="@+id/btnActualizarCorreo"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="22dp"
+                        android:background="#008577"
+                        android:text="Autenticar"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="18sp" />
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:animateLayoutChanges="true"
+                android:id="@+id/layoutUpdate"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:labelFor="@id/text_email"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:text="Ingresa un correo nuevo." />
+
+
+
+
+                <EditText
+                    android:id="@+id/edtOtro"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:drawableLeft="@drawable/ic_email"
+                    android:gravity="center"
+                    android:inputType="textPersonName"
+                    android:layout_marginBottom="10dp"
+                    android:drawablePadding="10dp"
+                    android:hint="Correo nuevo"
+                    android:singleLine="true" />
+
+
+
+
+                <Button
+                    android:id="@+id/btnOtro"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="22dp"
+                    android:background="#008577"
+                    android:text="Actualizar"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/qwert"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/login_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:elevation="4dp"
+            android:src="@drawable/ic_boy" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/qwert"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-light"
+            android:drawablePadding="10dp"
+            android:text="Update email"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:inputType="textEmailAddress"
+            android:singleLine="true" />
+
+
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressEmail"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
